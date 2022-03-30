@@ -1,1 +1,92 @@
-superpulse
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style type="text/css">
+        @font-face {
+            font-family: Tronica;
+            src: url("/Tronica-Mono-Regular.otf") format("opentype");
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            background-color: black;
+            font-family: "Courier New", Courier, monospace;
+            color: white;
+        }
+
+        #background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: -1;
+        }
+
+        #background img {
+            max-width: 60vw;
+            max-height: 60vh;
+            animation: pulse 2s infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1) rotate(0deg);
+            }
+            25% {
+                transform: scale(0.95) rotate(90deg);
+            }
+            50% {
+                transform: scale(0.8) rotate(180deg);
+            }
+            75% {
+                transform: scale(0.95) rotate(270deg);
+            }
+            100% {
+                transform: scale(1) rotate(360deg);
+            }
+        }
+        h2 {
+            position: absolute;
+            bottom: 10%;
+            left: min(50vw, calc(100vw - 300px));
+            font-size: 36px;
+            text-shadow: 4px 4px 1px #000;
+            font-family: Tronica, "Courier New", Courier, monospace;
+        }
+
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 24px;
+            }
+        }
+        
+        #content {
+            padding: 24px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="background">
+            <img src="/super_spiral.png" alt="superpulse spiral" />
+        </div>
+        <h2>NEW YORK CITY<br/>SUPERPULSE.CC<br/>1 (800) SPR-PLSE</h2>
+        <div id="content">
+            <p>Welcome to Super Pulse. Catch us in Central Park and join the ride.</p>
+            <p>Join our Discord</p>
+            <p>Email us at ...</p>
+        </div>
+    </body>
+</html>
